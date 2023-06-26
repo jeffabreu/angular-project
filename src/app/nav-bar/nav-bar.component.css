@@ -1,0 +1,56 @@
+i {
+    font-size: 25px;
+}
+.nav-bar {
+    padding: 10px 0;
+    background-color: #1e94d2;
+    height: 40px;
+    box-sizing: content-box;
+    margin: 0;
+}
+.navbar-toggle {
+    color: white;
+
+}
+
+/*Barra de opções do menu*/
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 220px;
+    background-color: #3a3633;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    transition: right 0.3s;
+}
+.navbar-menu.menu-open {
+    right: 0;
+}
+.navbar-menu.menu-closed {
+    right: -100%;
+}
+
+.usuario {
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px;
+    border-bottom: 1px solid #514f4e;
+}
+.navitem {
+    padding: 15px;
+}
+.navitem a{
+    text-decoration: none;
+    color: #b7b6b6;
+}
+.navitem a:hover{
+    
+    color: white;
+}
+
+

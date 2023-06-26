@@ -1,0 +1,14 @@
+<nav class="nav-bar" >
+    <div class="container">
+        <div class="ui-g">
+           <a href="javascript:;" class="navbar-toggle"  (click)="exibindoMenu = !exibindoMenu"><i class="pi pi-bars"></i></a>
+        </div>
+    </div>
+
+    <ul class="navbar-menu" [ngClass]="{ 'menu-open': exibindoMenu, 'menu-closed': !exibindoMenu }">
+        <li class="usuario">José da Silva</li>
+        <li class="navitem"><a href="#">Lançamentos</a></li>
+        <li class="navitem"><a href="#">Pessoas</a></li>
+        <li class="navitem"><a href="#">Logout</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,39 @@
+.child-grid {
+    margin-top: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
+.child-grid {
+    display: grid;
+}
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 220px ;
+}
+.container-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* Styles specific to small screens */
+@media screen and (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    .container-3 {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Styles specific to medium screens */
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* Additional styles for medium screens */
+  }
+  
+  /* Styles specific to large screens */
+  @media screen and (min-width: 1201px) {
+    /* Additional styles for large screens */
+  }

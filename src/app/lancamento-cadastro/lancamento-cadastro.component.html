@@ -1,0 +1,48 @@
+<div class="container">
+    <form>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <h1>Novo Lançamento</h1>
+            </div>
+            <div class="grid-container">
+                <div class="child-grid">
+                  <label for="vencimento">Vencimento</label>
+                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="false"></p-calendar>
+                </div>
+                <div class="child-grid">
+                  <label for="pagamento">Pagamento</label>
+                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy"></p-calendar>
+                </div>
+              </div>
+              <div class="container-2">
+                        <div class="child-grid">
+                            <label >Descrição</label>
+                            <input pInputText type="text">
+                        </div>
+                        <div class="child-grid" style="margin-left: 10px; ">
+                            <label >Valor</label>
+                            <input pInputText type="text" placeholder="0,00">
+                        </div>
+              </div>
+              <div class="container-3">
+                        <div class="child-grid">
+                            <label >Categoria</label>
+                            <input pInputText type="text">
+                        </div>
+                        <div class="child-grid" >
+                            <label >Pessoa</label>
+                            <input pInputText type="text">
+                        </div>
+                </div>
+            <div class="child-grid">
+                <label >Observação</label>
+                <textarea rows="5" cols="30" pInputTextarea></textarea>
+            </div>
+            <div class="button">
+                <button pButton type="submit" label="Salvar"></button>
+                <button pButton pRipple type="submit" label="Novo"></button>
+                <p-button label="Voltar para pesquisa" styleClass="p-button-link"></p-button>
+            </div>
+        </div>
+    </form>
+</div>
