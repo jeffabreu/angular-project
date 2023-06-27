@@ -1,8 +1,12 @@
 <div class="container">
+
     <form>
         <div class="ui-g">
             <div class="ui-g-12">
                 <h1>Novo Lançamento</h1>
+            </div>
+            <div class="ui-g-12">
+                <p-selectButton [options]="tipo" optionLabel= "label" optionValue = "value" #tipoOptions></p-selectButton>
             </div>
             <div class="grid-container">
                 <div class="child-grid">
@@ -10,7 +14,7 @@
                   <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="false"></p-calendar>
                 </div>
                 <div class="child-grid">
-                  <label for="pagamento">Pagamento</label>
+                  <label >{{ tipoOptions.value === '0' ? 'Recebimento' : 'Pagamento'}}</label>
                   <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy"></p-calendar>
                 </div>
               </div>
@@ -19,19 +23,19 @@
                             <label >Descrição</label>
                             <input pInputText type="text">
                         </div>
-                        <div class="child-grid" style="margin-left: 10px; ">
+                        <div class="child-grid" >
                             <label >Valor</label>
-                            <input pInputText type="text" placeholder="0,00">
+                            <input class="valor" pInputText type="text" placeholder="0,00">
                         </div>
               </div>
               <div class="container-3">
                         <div class="child-grid">
                             <label >Categoria</label>
-                            <input pInputText type="text">
+                            <p-dropdown [options]="categorias" placeholder="Selecione uma categoria" [editable]="true" ></p-dropdown>
                         </div>
                         <div class="child-grid" >
                             <label >Pessoa</label>
-                            <input pInputText type="text">
+                            <p-dropdown [options]="pessoas" placeholder="Selecione um nome" [editable]="true" [filter]="true"></p-dropdown>
                         </div>
                 </div>
             <div class="child-grid">

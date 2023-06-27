@@ -42,4 +42,7 @@ label {
 #col-data {
     text-align: center;
 }
+.p-dropdown {
+    width: 100%;
+}
 @import "primeicons/primeicons.css";

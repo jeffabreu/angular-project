@@ -11,20 +11,26 @@
 .container-2 {
     display: grid;
     grid-template-columns: 1fr 220px ;
+    grid-gap: 10px;
 }
 .container-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 220px 1fr;
+    grid-gap: 10px;
 }
 
 
 /* Styles specific to small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
     .grid-container {
       grid-template-columns: 1fr;
     }
     .container-3 {
         grid-template-columns: 1fr;
+    }
+    .container-2 {
+      display: grid;
+      grid-template-columns: 1fr  ;
     }
   }
   
