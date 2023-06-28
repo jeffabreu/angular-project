@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
 export class LancamentoCadastroComponent {
  date : Date = new Date()
  tipo: any[] = [
-  {label: 'Receita', value: '0'},
-  {label: 'Despesa', value: '1'}
+  {label: 'Receita', value: 'Receita'},
+  {label: 'Despesa', value: 'Despesa'}
  ]
+ value: string = 'Receita';
+ 
  categorias: { label: string, value: number }[] = [
   { label: 'Alimentação', value: 1 },
   { label: 'Luz', value: 2 },

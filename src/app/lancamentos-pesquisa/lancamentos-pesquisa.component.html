@@ -20,44 +20,8 @@
       <button pButton pRipple label="Pesquisar" class="p-button-success"></button>
     </div>
 
-    <div class="grid">
-      <div class="ui-g">
-        <div class="ui-g-12">
-          <p-table [value]="lancamentos" [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="2" >
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Vencimento</th>
-                    <th>Pagamento</th>
-                    <th>Valor</th>
-                    <th style="width: 120px;"></th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-lanc>
-                <tr>
-                    <td>{{ lanc.pessoa }}</td>
-                    <td>{{ lanc.descricao }}</td>
-                    <td>{{ lanc.dataVencimento }}</td>
-                    <td>{{ lanc.dataPagamento }}</td>
-                    <td class= "col-valor"style="text-align: right;" [ngStyle]="{color : lanc.tipo === 'Despesa' ? 'red' : 'blue'}" >{{ lanc.valor  }}</td>
-                    <td class="col-acoes">
-                      <button pButton class="custom-button" pTooltip="Editar" tooltipPosition="top">
-                        <a class="pi pi-pencil" ></a>
-                      </button>
-                      <button pButton class="custom-button" pTooltip="Deletar" tooltipPosition="top">
-                        <a class="pi pi-trash"></a>
-                      </button>
-                    </td>
-                     
-                </tr>
-            </ng-template>
-        </p-table>
-        
-        </div>
-      </div>
-    </div>
+    <app-table-lancamentos [lancamentos]="lancamentos"></app-table-lancamentos>
     <div class="button">
-      <a pButton pRipple label="Novo Lançamento" class="p-button-success"></a>
+      <a pButton pRipple label="Novo Lançamento" class="p-button-success" routerLink="./lancamento-cadastro.component.html"></a>
     </div>
 </div>

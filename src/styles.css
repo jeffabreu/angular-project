@@ -46,3 +46,23 @@ label {
     width: 100%;
 }
 @import "primeicons/primeicons.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.col-acoes {
+    width: 120px;
+    text-align: center;
+    display: flex;
+    
+}
+.custom-button{
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 5px;
+   padding: auto;
+    flex-shrink: 1;
+    justify-content: center;
+}
+button.p-element.custom-button.p-button.p-component {
+    margin: 4px;
+}

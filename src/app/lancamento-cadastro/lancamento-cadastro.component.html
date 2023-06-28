@@ -6,32 +6,35 @@
                 <h1>Novo Lançamento</h1>
             </div>
             <div class="ui-g-12">
-                <p-selectButton [options]="tipo" optionLabel= "label" optionValue = "value" #tipoOptions></p-selectButton>
+                <p-selectButton [options]="tipo" [(ngModel)]="value" name="selecao-botao" optionLabel= "label" optionValue = "value" #tipoOptions></p-selectButton>
             </div>
             <div class="grid-container">
                 <div class="child-grid">
                   <label for="vencimento">Vencimento</label>
-                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="false"></p-calendar>
+                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="false" [ngModelOptions]="{ standalone: true }"></p-calendar>
                 </div>
                 <div class="child-grid">
-                  <label >{{ tipoOptions.value === '0' ? 'Recebimento' : 'Pagamento'}}</label>
-                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy"></p-calendar>
+                  <label >{{ tipoOptions.value === 'Receita' ? 'Recebimento' : 'Pagamento'}}</label>
+                  <p-calendar [(ngModel)]="date" dateFormat="dd/mm/yy" [ngModelOptions]="{ standalone: true }"></p-calendar>
                 </div>
               </div>
               <div class="container-2">
                         <div class="child-grid">
                             <label >Descrição</label>
-                            <input pInputText type="text">
+                            <input  pInputText type="text" name="descricao" ngModel #descricao="ngModel" [minlength]="5" required>
+                            <!--<div class="alert" role="alert" style="color: red" *ngIf="descricao.hasError('required') && descricao.touched" >Preencha o campo</div>-->
+                            <app-message [control]="descricao.control" error="required" text="Preencha o Campo"></app-message>
+                            <app-message [control]="descricao.control" error="minlength" text="O campo tem que ter no mínimo 5 caracteres"></app-message>
                         </div>
-                        <div class="child-grid" >
+                        <div class="child-grid input-container" >
                             <label >Valor</label>
-                            <input class="valor" pInputText type="text" placeholder="0,00">
+                            <p-inputNumber mode="currency" currency="BRL" inputId="currency-pt" locale="pt-BR" [minFractionDigits]="2"></p-inputNumber>
                         </div>
               </div>
               <div class="container-3">
                         <div class="child-grid">
                             <label >Categoria</label>
-                            <p-dropdown [options]="categorias" placeholder="Selecione" ></p-dropdown>
+                            <p-dropdown [options]="categorias" placeholder="Selecione" [required]="true"></p-dropdown>
                         </div>
                         <div class="child-grid" >
                             <label >Pessoa</label>
@@ -43,8 +46,8 @@
                 <textarea rows="5" cols="30" pInputTextarea></textarea>
             </div>
             <div class="button">
-                <button pButton type="submit" label="Salvar"></button>
-                <button pButton pRipple type="submit" label="Novo"></button>
+                <button pButton type="submit" label="Salvar" style="margin-right: 5px;"></button>
+                <button pButton pRipple type="submit" label="Novo" ></button>
                 <p-button label="Voltar para pesquisa" styleClass="p-button-link"></p-button>
             </div>
         </div>

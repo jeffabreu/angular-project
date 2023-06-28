@@ -11,20 +11,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
-
+import { MessagesModule } from 'primeng/messages';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { MessageComponent } from './message/message.component';
+import {  RouterModule } from '@angular/router';
+import { TableLancamentosComponent } from './table-lancamentos/table-lancamentos.component';
+import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LancamentosPesquisaComponent,
     NavBarComponent,
-    LancamentoCadastroComponent
+    LancamentoCadastroComponent,
+    MessageComponent,
+    TableLancamentosComponent,
+    PessoasCadastroComponent
     
   ],
   imports: [
@@ -39,7 +47,11 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     BrowserAnimationsModule,
     InputTextareaModule,
     SelectButtonModule,
-    DropdownModule
+    DropdownModule,
+    InputNumberModule,
+    FormsModule,
+    MessagesModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

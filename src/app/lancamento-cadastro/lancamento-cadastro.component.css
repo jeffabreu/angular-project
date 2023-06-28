@@ -18,8 +18,15 @@
     grid-template-columns: 220px 1fr;
     grid-gap: 10px;
 }
-
-
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+input.ng-valid.ng-touched, select.ng-valid.ng-touched {
+  border: 1px solid green;
+}
+.input-container {
+  height: 50px;
+}
 /* Styles specific to small screens */
 @media screen and (max-width: 550px) {
     .grid-container {
@@ -27,10 +34,15 @@
     }
     .container-3 {
         grid-template-columns: 1fr;
+        grid-gap: 0;
     }
     .container-2 {
       display: grid;
       grid-template-columns: 1fr  ;
+      grid-gap: 0;
+    }
+    .input-container {
+      height: 60px;
     }
   }
   
