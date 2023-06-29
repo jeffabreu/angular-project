@@ -20,9 +20,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { MessageComponent } from './message/message.component';
 import {  RouterModule } from '@angular/router';
-import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
-import { PessoasCadastrocComponent } from './pessoas-cadastroc/pessoas-cadastroc.component';
+import { PessoasCadastroComponent } from './pessoas/pessoas-cadastro/pessoas-cadastro.component';
+import { PessoasCadastrocComponent } from './pessoas/pessoas-cadastroc/pessoas-cadastroc.component';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
+import { PessoasModule } from './pessoas/pessoas.module';
 
 
 @NgModule({
@@ -52,8 +53,10 @@ import { LancamentosModule } from './lancamentos/lancamentos.module';
     MessagesModule,
     RouterModule,
     MatTooltipModule,
-    LancamentosModule
+    LancamentosModule,
+    PessoasModule
   ],
+  exports: [MessageComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

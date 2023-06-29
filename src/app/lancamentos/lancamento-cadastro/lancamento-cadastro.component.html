@@ -23,8 +23,8 @@
                             <label >Descrição</label>
                             <input  pInputText type="text" name="descricao" ngModel #descricao="ngModel" [minlength]="5" required>
                             <!--<div class="alert" role="alert" style="color: red" *ngIf="descricao.hasError('required') && descricao.touched" >Preencha o campo</div>-->
-                            <app-message [control]="descricao.control" error="required" text="Preencha o Campo"></app-message>
-                            <app-message [control]="descricao.control" error="minlength" text="O campo tem que ter no mínimo 5 caracteres"></app-message>
+                           <!-- <app-message [control]="descricao.control" error="required" text="Preencha o Campo"></app-message>
+                            <app-message [control]="descricao.control" error="minlength" text="O campo tem que ter no mínimo 5 caracteres"></app-message>-->
                         </div>
                         <div class="child-grid input-container" >
                             <label >Valor</label>
