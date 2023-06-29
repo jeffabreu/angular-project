@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./pessoas-cadastro.component.css']
 })
 export class PessoasCadastroComponent {
-  pessoas: { label: string, value: number }[] = [
-    { label: 'João da Silva', value: 1 },
-    { label: 'Maria Souza', value: 2 },
-    { label: 'Pedro Almeida', value: 3 },
-    { label: 'Ana Santos', value: 4 },
-    { label: 'Carlos Oliveira', value: 5 },
-    // Adicione mais pessoas conforme necessário
+  pessoas: { nome: string, city: string, state: string, status: string }[] = [
+    { nome: 'João da Silva', city: 'São Paulo', state: 'SP', status: 'ativo' },
+    { nome: 'Maria Souza', city: 'Rio de Janeiro', state: 'RJ', status: 'ativo' },
+    { nome: 'Pedro Almeida', city: 'Belo Horizonte', state: 'MG', status: 'inativo' },
+    { nome: 'Ana Santos', city: 'Salvador', state: 'BA', status: 'ativo' },
+    { nome: 'Carlos Oliveira', city: 'Curitiba', state: 'PR', status: 'inativo' },
+    // Add more persons as needed
   ];
 }

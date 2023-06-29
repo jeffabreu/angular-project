@@ -1,0 +1,15 @@
+.child-grid input{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.child-grid {
+    display: grid;
+    grid-template-columns: auto(150px);
+}
+.grid-container {
+    display: grid;
+}
+label {
+    margin-top: 10px;
+    grid-column: 1/3;
+}

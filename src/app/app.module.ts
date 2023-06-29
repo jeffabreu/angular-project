@@ -12,27 +12,26 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { MessagesModule } from 'primeng/messages';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { MessageComponent } from './message/message.component';
 import {  RouterModule } from '@angular/router';
-import { TableLancamentosComponent } from './table-lancamentos/table-lancamentos.component';
 import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
+import { PessoasCadastrocComponent } from './pessoas-cadastroc/pessoas-cadastroc.component';
+import { LancamentosModule } from './lancamentos/lancamentos.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LancamentosPesquisaComponent,
     NavBarComponent,
-    LancamentoCadastroComponent,
     MessageComponent,
-    TableLancamentosComponent,
-    PessoasCadastroComponent
+    PessoasCadastroComponent,
+    PessoasCadastrocComponent
     
   ],
   imports: [
@@ -51,7 +50,9 @@ import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.co
     InputNumberModule,
     FormsModule,
     MessagesModule,
-    RouterModule
+    RouterModule,
+    MatTooltipModule,
+    LancamentosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,6 @@
+.mouse-hover {
+    text-decoration: none;
+}
+.mouse-hover:hover {
+    text-decoration: underline;
+}

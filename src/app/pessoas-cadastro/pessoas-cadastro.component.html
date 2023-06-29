@@ -23,10 +23,18 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-pess>
                     <tr>
-                        <td>{{pess.label}}</td>
-                        <td>{{pess.value}}</td>
-                        <td></td>
-                        <td></td>
+                        <td>{{pess.nome}}</td>
+                        <td>{{pess.city}}</td>
+                        <td>{{pess.state}}</td>
+                        <td [matTooltip]="pess.status === 'ativo' ? 'Desativar' : 'Ativar'"><a class="mouse-hover" style="color: rgb(33, 32, 32); "  href="#" >{{pess.status}}</a></td>
+                        <td class="col-acoes">
+                            <button pButton class="custom-button" pTooltip="Editar" tooltipPosition="top">
+                                <a class="pi pi-pencil" ></a>
+                              </button>
+                              <button pButton class="custom-button" pTooltip="Deletar" tooltipPosition="top">
+                                <a class="pi pi-trash"></a>
+                              </button>
+                        </td>
                     </tr>
 
                 </ng-template>
