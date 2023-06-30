@@ -15,6 +15,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { CalendarModule } from 'primeng/calendar';
 
+import { SharedPModule } from '../shared/shared.module';
+
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { CalendarModule } from 'primeng/calendar';
     MessagesModule,
     TooltipModule,
     SelectButtonModule,
-    CalendarModule
+    CalendarModule,
+    SharedPModule
   ],
   exports: [
     LancamentoCadastroComponent,
